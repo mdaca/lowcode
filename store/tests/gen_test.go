@@ -5,6 +5,7 @@ package tests
 // Template:	pkg/codegen/assets/store_test_all.gen.go.tpl
 // Definitions:
 //  - store/actionlog.yaml
+//  - store/activity_log.yaml
 //  - store/apigw_filter.yaml
 //  - store/apigw_route.yaml
 //  - store/applications.yaml
@@ -56,6 +57,11 @@ func testAllGenerated(t *testing.T, s store.Storer) {
 	// Run generated tests for Actionlog
 	t.Run("Actionlog", func(t *testing.T) {
 		testActionlog(t, s)
+	})
+
+	// Run generated tests for ActivityLog
+	t.Run("ActivityLog", func(t *testing.T) {
+		testActivityLog(t, s)
 	})
 
 	// Run generated tests for ApigwFilter

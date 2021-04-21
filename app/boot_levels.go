@@ -344,6 +344,7 @@ func (app *CortezaApp) InitServices(ctx context.Context) (err error) {
 	// will most likely be merged in the future
 	err = sysService.Initialize(ctx, app.Log, app.Store, app.WsServer, sysService.Config{
 		ActionLog: app.Opt.ActionLog,
+		Discovery: app.Opt.Discovery,
 		Storage:   app.Opt.ObjStore,
 		Template:  app.Opt.Template,
 		Auth:      app.Opt.Auth,
@@ -380,6 +381,7 @@ func (app *CortezaApp) InitServices(ctx context.Context) (err error) {
 	// will most likely be merged in the future
 	err = cmpService.Initialize(ctx, app.Log, app.Store, cmpService.Config{
 		ActionLog: app.Opt.ActionLog,
+		Discovery: app.Opt.Discovery,
 		Storage:   app.Opt.ObjStore,
 	})
 

@@ -5,6 +5,7 @@ package store
 // Template:	pkg/codegen/assets/store_interfaces_joined.gen.go.tpl
 // Definitions:
 //  - store/actionlog.yaml
+//  - store/activity_log.yaml
 //  - store/apigw_filter.yaml
 //  - store/apigw_route.yaml
 //  - store/applications.yaml
@@ -52,6 +53,7 @@ type (
 	// Sortable interface combines interfaces of all supported store interfaces
 	storerGenerated interface {
 		Actionlogs
+		ActivityLogs
 		ApigwFilters
 		ApigwRoutes
 		Applications
